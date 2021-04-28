@@ -6,11 +6,14 @@
                 v-on:reloadlist="getList()"
             />
         </div>
+        <div class="container-body">
+            <list-view
+                :items="items"
+                v-on:reloadlist="getList()"
+            />
 
-        <list-view
-            :items="items"
-            v-on:reloadlist="getList()"
-        />
+        </div>
+
 
     </div>
 </template>
@@ -45,19 +48,3 @@ export default {
 
 }
 </script>
-
-<style scoped>
-.todoListContainer {
-    width: 300px;
-    margin: auto;
-}
-
-.heading {
-    background: #b5b5b5;
-    padding: 10px;
-}
-
-#title {
-    text-align: center;
-}
-</style>

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html{
+    background: radial-gradient(#9391d4, #e7a4a4);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#left-top, #left-bottom, #right-top, #right-bottom{
+    position: absolute;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: 0.5s ease opacity;
+}
+
+#left-top.left-top{
+    background: linear-gradient(-45deg, #9391d4, #e7a4a4)  ;
+    opacity: 0;
+}
+
+#right-top{
+    background: linear-gradient(45deg, #9391d4, #e7a4a4)  ;
+    opacity: 0;
+}
+
+#left-bottom{
+    background: linear-gradient(45deg, #e7a4a4, #9391d4)  ;
+    opacity: 0;
+}
+
+#right-bottom{
+    background: linear-gradient(-45deg, #e7a4a4, #9391d4)  ;
+    opacity: 0;
+}
+
+#left-top.left-top,
+#right-top.right-top,
+#left-bottom.left-bottom,
+#right-bottom.right-bottom {
+    opacity: 1;
+}
+
+#app{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.todoListContainer {
+    width: 450px;
+    height: 500px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px #5a5a5a;
+}
+
+.heading {
+    margin-top: -18px;
+    background: rgba(255,255,255,0.4);
+    color: #222222;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+#title{
+    padding-top: 20px;
+    font-weight: 400;
+}
+
+.addItem {
+    display: flex;
+    align-items: center;
+    padding: 0 50px 10px;
+}
+
+.input {
+    padding: 10px;
+    background: #f7f7f7;
+    border: 0;
+    outline: none;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+.input:hover{
+    box-shadow: 0 0 10px #ee889c;
+}
+
+
+.plus {
+    padding: 6px;
+
+    background: #838383;
+    border-radius: 0 10px 10px 0;
+
+    font-size: 24px;
+
+}
+
+.active {
+    background-color: #c14568;
+    color: #c19eb4;
+    opacity: 1;
+    box-shadow: 0 0 10px #ee889c;
+
+}
+
+.active:hover{
+    opacity: 0.8;
+}
+
+.inactive {
+    color: white;
+}
+
+.container-body{
+    display: block;
+    overflow-y: scroll;
+
+    height: 350px;
+    padding: 10px 50px;
+}
+.itemText {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    transition: all 1s ease;
+}
+
+.item:hover{
+    background: #c14568;
+    box-shadow: 0 0 10px #dd5069;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #9f9f9f;
+    background-color: rgba(230, 230,230, 0.5);
+}
+
+.item.completed:hover{
+
+    background-color: rgba(230, 230,230, 0.5);
+    box-shadow: 0 0 10px #dd5069;
+}
+
+.trashcan{
+    display: inline-block;
+    background: transparent;
+    opacity: 0;
+    border: none;
+    color: #1b1c1d;
+    outline: none;
+    transition: 0.5s ease all;
+}
+
+.item:hover .trashcan,
+.item:hover .checkbox{
+    opacity: 1;
+}
+
+.trashcan:hover{
+    color: #d6d6d6;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 5px;
+}
+
+.checkbox:hover{
+
+}
+
