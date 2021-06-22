@@ -12,6 +12,6 @@ Project is created with:
 To run this project:
 
 * Download project
-* In terminal go to project directory and type: $ php artisan serve
-* In other terminal tab type: $ npm run watch
-* Go to the browser and type in URL field: http://127.0.0.1:8000
+* Put project folder inside htdocs folder (path is something like this C:\xampp\htdocs)
+* Start MySQL and Apache server
+* Go to the browser and type in URL field: localhost/ToDoList/index.php
