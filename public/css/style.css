@@ -143,6 +143,7 @@ html{
     padding: 5px;
     margin-top: 5px;
     transition: all 1s ease;
+    cursor: pointer;
 }
 
 .item:hover{
@@ -190,7 +191,6 @@ html{
     border-radius: 5px;
 }
 
-.checkbox:hover{
-
+.body{
+    margin: 0;
 }
-
